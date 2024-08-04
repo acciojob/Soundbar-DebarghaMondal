@@ -5,15 +5,86 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+	<style>
+	/*  your css code here. If applicable */
+.btn {
+   background-color: #4CAF50; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+}
+
+.stop {
+   background-color: #f44336; /* Red */
+	 padding: 15px 32px;
+   /* Rest of the properties can be same as .btn */
+}
+
+	</style>
 
 <body>
 	<!-- the entire body must be written by student -->
 
 	<div id="buttons">
-   <button class="btn" id="sound1">Music</button>
+   <button class="btn" id="sound1">Sound 1</button>
+   <button class="btn" id="sound2">Sound 2</button>
+   <button class="btn" id="sound3">Sound 3</button>
+   <button class="btn" id="sound4">Sound 4</button>
+   <button class="btn" id="sound5">Sound 5</button>
    <button class="stop">Stop</button>
 </div>
-    <script type="text/javascript" src="./script.js">
+    <script >
+		document.getElementById('sound1').addEventListener('click', function() {
+   var sound1 = new Audio('sounds/sound1.mp3');
+   sound1.play();
+});
+
+document.getElementById('sound2').addEventListener('click', function() {
+   var sound2 = new Audio('sounds/sound2.mp3');
+   sound2.play();
+});
+		document.getElementById('sound3').addEventListener('click', function() {
+   var sound3 = new Audio('sounds/sound3.mp3');
+   sound3.play();
+});
+
+		document.getElementById('sound4').addEventListener('click', function() {
+   var sound4 = new Audio('sounds/sound4.mp3');
+   sound4.play();
+});
+
+		document.getElementById('sound5').addEventListener('click', function() {
+   var sound5 = new Audio('sounds/sound5.mp3');
+   sound5.play();
+});
+
+// Repeat for each sound
+
+var stopButton = document.getElementById('stop');
+stopButton.addEventListener('click', function() {
+   // Code to stop all sounds
+	sound1.pause();
+   sound1.currentTime = 0;
+
+   sound2.pause();
+   sound2.currentTime = 0;
+
+	sound3.pause();
+   sound3.currentTime = 0;
+
+	sound4.pause();
+   sound4.currentTime = 0;
+
+	sound5.pause();
+   sound5.currentTime = 0;
+
+});
 </script>
 
 </body>
