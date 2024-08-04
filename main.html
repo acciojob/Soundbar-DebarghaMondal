@@ -40,36 +40,36 @@
    <button class="stop">Stop</button>
 </div>
     <script >
-		document.getElementById('sound1').addEventListener('click', function() {
-   var sound1 = new Audio('sounds/sound1.mp3');
+		var sound1 = new Audio('sounds/sound1.mp3');
+var sound2 = new Audio('sounds/sound2.mp3');
+		var sound3 = new Audio('sounds/sound3.mp3');
+		var sound4 = new Audio('sounds/sound4.mp3');
+		var sound5 = new Audio('sounds/sound5.mp3');
+
+// Add an event listener to each button to play the corresponding sound
+document.getElementById('sound1').addEventListener('click', function() {
    sound1.play();
 });
 
 document.getElementById('sound2').addEventListener('click', function() {
-   var sound2 = new Audio('sounds/sound2.mp3');
    sound2.play();
 });
+
 		document.getElementById('sound3').addEventListener('click', function() {
-   var sound3 = new Audio('sounds/sound3.mp3');
    sound3.play();
 });
 
 		document.getElementById('sound4').addEventListener('click', function() {
-   var sound4 = new Audio('sounds/sound4.mp3');
    sound4.play();
 });
 
 		document.getElementById('sound5').addEventListener('click', function() {
-   var sound5 = new Audio('sounds/sound5.mp3');
    sound5.play();
 });
 
-// Repeat for each sound
-
-var stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', function() {
-   // Code to stop all sounds
-	sound1.pause();
+// Add an event listener to the stop button to stop all sounds
+document.querySelector('.stop').addEventListener('click', function() {
+   sound1.pause();
    sound1.currentTime = 0;
 
    sound2.pause();
